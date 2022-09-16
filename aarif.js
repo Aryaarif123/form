@@ -3,11 +3,11 @@ let userEntries=[];
 if(localStorage.getItem("userEntries")===null)
 {
     userEntries =[];
-    console.log("if");
+   
 }
 else{
    userEntries = JSON.parse(localStorage.getItem("userEntries")); 
-   console.log("else");
+  
 }
 //console.log(userEntries);
 
@@ -58,9 +58,9 @@ var birthYear = dob.split("-");
 let year=birthYear[0]
 var age = currentYear-year
 console.log({age,currentYear,birthYear})
-if(age < 18 || age > 55){
+if(age >55 || age <18){
     document.getElementById('dob').style='border:1px solid red'
-  return  alert("Age must be between 18 and 55")
+  return  alert("Age must be between 18 and 55 otherwise it'll rejected")
 
 }else{
     document.getElementById('dob').style='border:none'
